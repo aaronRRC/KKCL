@@ -1,15 +1,62 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Kkcl</title>
+  <title>K K Custome Leather</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= #javascript_include_tag 'application', 'data-turbolinks-track' => true
   %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <section id="container">
+<div> 
+  <section id="logo">
+    <%= link_to image_tag("logo.png"), home_path %>
+  </section>
+  
+  <section>
+    <ul>
+      <li>Login</li>
+      <li>Cart</li>
+    </ul>
+  </section>
+    
+  <section>
+    <input type="text" id="search" />
+    <input type="submit" value="Search" />
+  </section>
+  
+  <section>
+    <nav class="navtop">
+      <ul>
+        <li>HOME</li>
+        <li>
+          PRODUCTS
+          <ul>
+            <li>Belts</li>
+          </ul>
+        </li>
+        <li>ABOUT US</li>
+        <li>CONTACT US</li>
+      </ul>
+    </nav>
+  </section>
+  
+</div>
 
 <%= yield %>
 
+<footer>
+  <nav class="navbottom">
+    <ul>
+      <li>HOME</li>
+      <li>PRODUCTS</li>
+      <li>ABOUT US</li>
+      <li>CONTACT US</li>
+    </ul>
+  </nav>
+  <p>Copyright &#169; 2015 K K Custom Leather . All Rights Reserved.</P>
+</footer>
+</section>
 </body>
 </html>
