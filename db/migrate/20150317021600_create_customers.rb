@@ -1,7 +1,7 @@
 class CreateCustomers < ActiveRecord::Migration
   def change
-    create_table :customers do |t|
-      t.integer :id
+    create_table :customers, :id => false do |t|
+      t.integer :id, primary: true
       t.string :name
       t.string :address
       t.string :city

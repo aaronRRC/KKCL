@@ -1,7 +1,7 @@
 class CreateLineitems < ActiveRecord::Migration
   def change
-    create_table :lineitems do |t|
-      t.integer :id
+    create_table :lineitems, :id => false do |t|
+      t.integer :id, primary: true
       t.integer :qty
       t.decimal :price
       t.integer :product_id
