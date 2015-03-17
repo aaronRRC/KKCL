@@ -1,0 +1,2 @@
+module KkclHelper
+end
