@@ -11,10 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150317022033) do
+ActiveRecord::Schema.define(version: 20150318013543) do
 
-  create_table "customers", id: false, force: true do |t|
-    t.integer  "id"
+  create_table "customers", force: true do |t|
     t.string   "name"
     t.string   "address"
     t.string   "city"
@@ -26,8 +25,7 @@ ActiveRecord::Schema.define(version: 20150317022033) do
     t.datetime "updated_at"
   end
 
-  create_table "lineitems", id: false, force: true do |t|
-    t.integer  "id"
+  create_table "lineitems", force: true do |t|
     t.integer  "qty"
     t.decimal  "price"
     t.integer  "product_id"
@@ -36,8 +34,7 @@ ActiveRecord::Schema.define(version: 20150317022033) do
     t.datetime "updated_at"
   end
 
-  create_table "orders", id: false, force: true do |t|
-    t.integer  "id"
+  create_table "orders", force: true do |t|
     t.string   "status"
     t.decimal  "pst_rate"
     t.decimal  "gst_rate"
@@ -47,19 +44,18 @@ ActiveRecord::Schema.define(version: 20150317022033) do
     t.datetime "updated_at"
   end
 
-  create_table "products", id: false, force: true do |t|
-    t.integer  "id"
+  create_table "products", force: true do |t|
     t.string   "name"
     t.text     "description"
     t.decimal  "price"
     t.integer  "stock_qty"
+    t.string   "image"
     t.string   "type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "provinces", id: false, force: true do |t|
-    t.integer  "id"
+  create_table "provinces", force: true do |t|
     t.string   "name"
     t.decimal  "pst"
     t.decimal  "gst"
