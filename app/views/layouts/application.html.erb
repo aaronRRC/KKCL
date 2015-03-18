@@ -17,7 +17,7 @@
   <section>
     <ul>
       <li>Login</li>
-      <li>Cart</li>
+      <li><%= link_to "Cart", cart_path %></li>
     </ul>
   </section>
     
@@ -29,15 +29,10 @@
   <section>
     <nav class="navtop">
       <ul>
-        <li>HOME</li>
-        <li>
-          PRODUCTS
-          <ul>
-            <li>Belts</li>
-          </ul>
-        </li>
-        <li>ABOUT US</li>
-        <li>CONTACT US</li>
+        <li><%= link_to "HOME", home_path %></li>
+        <li><%= link_to "PRODUCTS", products_path %></li>
+        <li><%= link_to "ABOUT US", about_path %></li>
+        <li><%= link_to "CONTACT US", contact_path %></li>
       </ul>
     </nav>
   </section>
@@ -49,10 +44,10 @@
 <footer>
   <nav class="navbottom">
     <ul>
-      <li>HOME</li>
-      <li>PRODUCTS</li>
-      <li>ABOUT US</li>
-      <li>CONTACT US</li>
+      <li><%= link_to "HOME", home_path %></li>
+      <li><%= link_to "PRODUCTS", products_path %></li>
+      <li><%= link_to "ABOUT US", about_path %></li>
+      <li><%= link_to "CONTACT US", contact_path %></li>
     </ul>
   </nav>
   <p>Copyright &#169; 2015 K K Custom Leather . All Rights Reserved.</P>

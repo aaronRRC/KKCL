@@ -21,8 +21,8 @@
     </div>
     
     <div>
-        <%= f.label :type, 'Select a Product Type:' %><br/>
-        <%= select_tag :type, options_for_select(@types) %>
+        <%= f.label :image, 'Got a picture?' %><br/>
+        <%= f.text_field :image %>
     </div>
     
     <%= f.submit "Submit New Product" %>

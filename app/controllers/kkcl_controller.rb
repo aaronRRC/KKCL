@@ -4,6 +4,7 @@ class KkclController < ApplicationController
   end
   
   def cart
+    @orders = Order.all
   end
   
   def product
@@ -16,13 +17,12 @@ class KkclController < ApplicationController
   def contact_us
   end
   
-  def belt
-    @products = Product.where(type: 'Belt')
-  end
-  
   def new
     @product = Product.new
-    @types = ['Belt', 'Wallet', 'Guitar Strap', 'Dog Collars & Leashes']
+  end
+  
+  def show
+    @product = Product.find(params[:id])
   end
   
   def create
@@ -41,6 +41,6 @@ class KkclController < ApplicationController
   
   private
   def product_params
-    params.require(:product).permit(:id, :name, :description, :price, :stock_qty, :type)
+    params.require(:product).permit(:name, :description, :price, :stock_qty)
   end
 end
