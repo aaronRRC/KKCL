@@ -1,7 +1,6 @@
 class CreateProducts < ActiveRecord::Migration
   def change
-    create_table :products, :id => false do |t|
-      t.integer :id, primary: true
+    create_table :products do |t|
       t.string :name
       t.text :description
       t.decimal :price
