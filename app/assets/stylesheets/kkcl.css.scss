@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+a{
+    text-decoration: none;
+}
+
 #container{
     background: #E8E8E8;
     margin-left: auto;
@@ -10,23 +14,58 @@
     border-radius: 15px;
 }
 
+#google{
+    float: right;
+    margin-top: -30px;
+}
+
 .navtop {
-    background: blue;
+    font-size: 30px;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+    ul{
+        li{
+            margin-left:28px;
+        }
+    }
 }
 
 .navbottom{
     ul{
         li{
-           margin-right:12px; 
+           margin-right:5px;
         }
         li:after{
             content:"|";
+            
+        }
+        
+        li:last-of-type:after{
+            content:"";
+            
+        }
+    }
+}
+
+#log{
+    font-size: 25px;
+    ul{
+        li{
+            display: inline;
+        }
+        li:after{
+            content:"|";
+            margin-left: 10px;
         }
         
         li:last-of-type:after{
             content:"";
         }
     }
+    float: right;
+    margin-top:-110px;
 }
 
 nav ul{
