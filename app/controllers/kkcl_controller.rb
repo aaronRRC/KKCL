@@ -41,6 +41,6 @@ class KkclController < ApplicationController
   
   private
   def product_params
-    params.require(:product).permit(:name, :description, :price, :stock_qty)
+    params.require(:product).permit(:name, :description, :price, :stock_qty, :image, :type)
   end
 end

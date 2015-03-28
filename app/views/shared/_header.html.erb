@@ -1,0 +1,29 @@
+<div> 
+  <section id="logo">
+    <%= link_to image_tag("logo.png"), home_path %>
+  </section>
+  
+  <section id="log">
+    <ul>
+      <li><%= link_to "Login", admin_root_path %></li>
+      <li><%= link_to "Cart", cart_path %></li>
+    </ul>
+  </section>
+    
+  <section id="google">
+    <input type="text" id="search" />
+    <input type="submit" value="Search"/>
+  </section>
+  
+  <section>
+    <nav class="navtop">
+      <ul>
+        <li><%= link_to "HOME", home_path %></li>
+        <li><%= link_to "PRODUCTS", products_path %></li>
+        <li><%= link_to "ABOUT US", about_path %></li>
+        <li><%= link_to "CONTACT US", contact_path %></li>
+      </ul>
+    </nav>
+  </section>
+  
+</div>
