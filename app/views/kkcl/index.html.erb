@@ -1,3 +1,6 @@
 <% @products.each do |product| %>
     <div><%= product.id %></div>
+    <% if product.images.present? %>
+        <p><%= image_tag product.images.url %></p>
+    <% end %>
 <% end %>
