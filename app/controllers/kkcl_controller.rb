@@ -1,6 +1,6 @@
 class KkclController < ApplicationController
   def index
-    @products = Product.limit(9)
+    @products = Product.order('id').page(params[:page]).per(1)
   end
   
   def cart
