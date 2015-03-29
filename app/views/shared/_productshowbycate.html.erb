@@ -1,0 +1,15 @@
+<%= render 'shared/productaside' %>
+
+<section id='showproduct'>
+    <%= paginate @products %>
+    
+    <% @products.each do |product| %>
+        <div><%= product.id %></div>
+        <% if product.images.present? %>
+            <p><%= image_tag product.images.medium.url %></p>
+        <% end %>
+    <% end %>
+    
+    
+    <%= paginate @products %>
+</section>

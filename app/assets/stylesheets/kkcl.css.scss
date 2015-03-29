@@ -28,10 +28,6 @@ a{
     ul{
         li{
             margin-left:28px;
-            
-            #productcate{
-                display: none;
-            }
         }
     }
 }
@@ -82,4 +78,14 @@ footer{
     margin-top:200px;
     text-align: center;
     font-size: 13px;
+}
+
+#productcate{
+    border: 1px dashed black;
+    width:150px;
+    position: fixed;
+}
+
+#showproduct{
+    margin-left: 200px;
 }

@@ -1,5 +1,5 @@
 <% @products.each do |product| %>
-    <div><%= product.id %></div>
+    <div><%= product.name %></div>
     <% if product.images.present? %>
         <p><%= image_tag product.images.medium.url %></p>
     <% end %>

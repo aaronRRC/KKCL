@@ -11,6 +11,22 @@ class KkclController < ApplicationController
     @products = Product.order('id').page(params[:page]).per(5)
   end
   
+  def belt
+    @products = Product.where(leather_cat: 'Belt').page(params[:page]).per(6)
+  end
+  
+  def gs
+    @products = Product.where(leather_cat: 'GS').page(params[:page]).per(6)
+  end
+  
+  def wallet
+    @products = Product.where(leather_cat: 'Wallet').page(params[:page]).per(6)
+  end
+  
+  def dcl
+    @products = Product.where(leather_cat: 'DCL').page(params[:page]).per(6)
+  end
+  
   def about_us
   end
   
@@ -41,6 +57,6 @@ class KkclController < ApplicationController
   
   private
   def product_params
-    params.require(:product).permit(:name, :description, :price, :stock_qty, :image, :type)
+    params.require(:product).permit(:name, :description, :price, :stock_qty, :images, :leather_cat)
   end
 end
