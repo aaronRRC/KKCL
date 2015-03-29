@@ -1,6 +1,6 @@
 class KkclController < ApplicationController
   def index
-    @products = Product.order('id').page(params[:page]).per(1)
+    @products = Product.limit(6)
   end
   
   def cart
@@ -8,7 +8,7 @@ class KkclController < ApplicationController
   end
   
   def product
-    @products = Product.all
+    @products = Product.order('id').page(params[:page]).per(5)
   end
   
   def about_us
