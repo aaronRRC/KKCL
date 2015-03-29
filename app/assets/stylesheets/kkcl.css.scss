@@ -21,7 +21,7 @@ a{
 }
 
 .navtop {
-    font-size: 30px;
+    font-size: 35px;
     width: 800px;
     margin-left: auto;
     margin-right: auto;
@@ -96,6 +96,10 @@ footer{
     width:$default_width;
     margin-left: auto;
     margin-right: auto;
+    
+    #mainshow{
+        width:700px;
+    }
 }
 
 #about{
@@ -118,4 +122,21 @@ footer{
     width:$default_width;
     margin-left: auto;
     margin-right: auto;
+}
+
+#ad{
+    border: 1px double blacr;
+    height: 200px;
+    width: $default_width;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom: 35px;
+    
+    P{
+        font-size:28px;
+        font-weight: bold;
+        color: white;
+        margin-top: -200px;
+        margin-left: 10px;
+    }
 }

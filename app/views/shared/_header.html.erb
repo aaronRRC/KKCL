@@ -11,17 +11,19 @@
   </section>
     
   <section id="google">
-    <input type="text" id="search" />
-    <input type="submit" value="Search"/>
+    <% form_tag :method => 'get' do %>
+      <%= text_field_tag :search, params[:search] %>
+      <%= submit_tag "Search", :name => nil %>
+    <% end %>
   </section>
   
   <section>
     <nav class="navtop">
       <ul>
-        <li><%= link_to "HOME", home_path %></li>
-        <li><%= link_to "PRODUCTS", products_path %></li>         
-        <li><%= link_to "ABOUT US", about_path %></li>
-        <li><%= link_to "CONTACT US", contact_path %></li>
+        <li><%= link_to "Home", home_path %></li>
+        <li><%= link_to "Products", products_path %></li>         
+        <li><%= link_to "About Us", about_path %></li>
+        <li><%= link_to "Ccontact Us", contact_path %></li>
       </ul>
     </nav>
   </section>

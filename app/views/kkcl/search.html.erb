@@ -1,0 +1,11 @@
+<section id="productmainpage">
+    <section id="mainshow">
+        <% @@find_product.each do |product| %>
+            <div><%= product.name, :action => 'show', :id => product.id %><br/>
+                <% if product.images.present? %>
+                    <%= image_tag product.images.large.url %>
+                <% end %>
+            </div><br/>
+        <% end %>
+    </section>
+</section>

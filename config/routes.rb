@@ -6,7 +6,6 @@ Rails.application.routes.draw do
   #get  'new'            => 'kkcl#new'
   #post 'product'        => 'kkcl#create'
   
-  
   get  'cart'           => 'kkcl#cart',    as: 'cart'
   get  'product'        => 'kkcl#product', as: 'products'
   get  'product/:id'    => 'kkcl#show',    as: 'product'
@@ -17,5 +16,7 @@ Rails.application.routes.draw do
   get  'wallet'         => 'kkcl#wallet',  as: 'wallet'
   get  'gs'             => 'kkcl#gs',      as: 'gs'
   get  'dcl'            => 'kkcl#dcl',     as: 'dcl'
-  
+    
+  resources :kkcl
+
 end

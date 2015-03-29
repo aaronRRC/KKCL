@@ -1,8 +1,16 @@
+<section id="ad">
+    <%= image_tag @newone.images.url, width:750, height:200 %>
+    <p>Our New Product</p>
+</section>
+
 <section id="productmainpage">
-    <% @products.each do |product| %>
-        <div><%= product.name %></div>
-        <% if product.images.present? %>
-            <p><%= image_tag product.images.medium.url %></p>
+    <section id="mainshow">
+        <% @products.each do |product| %>
+            <div><%= product.name %><br/>
+                <% if product.images.present? %>
+                    <%= image_tag product.images.large.url %>
+                <% end %>
+            </div><br/>
         <% end %>
-    <% end %>
+    </section>
 </section>
