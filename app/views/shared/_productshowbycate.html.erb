@@ -1,5 +1,8 @@
 <%= render 'shared/productaside' %>
 
+<% if @products.count == 0 %>
+    <p id="empty">Sorry, this section is currently empty.</p>
+<% elsif @products.count > 0 %>
 <section id='showproduct'>
     <%= paginate @products %>
     
@@ -14,3 +17,4 @@
     
     <%= paginate @products %>
 </section>
+<% end %>

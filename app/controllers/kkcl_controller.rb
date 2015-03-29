@@ -44,7 +44,18 @@ class KkclController < ApplicationController
   end
   
   def new
-    @product = Product.new
+    @products = Product.where(status: 'new').page(params[:page]).per(6)
+    @find_product = Product.search(params[:search])
+  end
+  
+  def ru
+    @products = Product.where(status: 'ru').page(params[:page]).per(6)
+    @find_product = Product.search(params[:search])
+  end
+  
+  def os
+    @products = Product.where(status: 'os').page(params[:page]).per(6)
+    @find_product = Product.search(params[:search])
   end
   
   def show

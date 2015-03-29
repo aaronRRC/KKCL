@@ -3,7 +3,6 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   root to: 'kkcl#index',                   as: 'home'
   
-  #get  'new'            => 'kkcl#new'
   #post 'product'        => 'kkcl#create'
   
   get  'cart'           => 'kkcl#cart',    as: 'cart'
@@ -16,7 +15,11 @@ Rails.application.routes.draw do
   get  'wallet'         => 'kkcl#wallet',  as: 'wallet'
   get  'gs'             => 'kkcl#gs',      as: 'gs'
   get  'dcl'            => 'kkcl#dcl',     as: 'dcl'
-    
-  resources :kkcl
+  
+  get  'new'            => 'kkcl#new',     as: 'new'
+  get  'os'             => 'kkcl#os',      as: 'os'
+  get  'ru'             => 'kkcl#ru',      as: 'ru'
+  
+  #resources :kkcl
 
 end
