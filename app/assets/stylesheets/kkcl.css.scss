@@ -1,6 +1,7 @@
 // Place all the styles related to the kkcl controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+ $default_width: 750px;
 
 a{
     text-decoration: none;
@@ -84,8 +85,37 @@ footer{
     border: 1px dashed black;
     width:150px;
     position: fixed;
+    margin-left: 15px;
 }
 
 #showproduct{
     margin-left: 200px;
+}
+
+#productmainpage{
+    width:$default_width;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#about{
+    width:$default_width;
+    margin-left: auto;
+    margin-right: auto;
+    
+    P{
+        font-size:20px;
+        b{
+            font-size:30px;
+        }
+        img{
+            float:right;
+        }
+    }
+}
+
+#contact{
+    width:$default_width;
+    margin-left: auto;
+    margin-right: auto;
 }

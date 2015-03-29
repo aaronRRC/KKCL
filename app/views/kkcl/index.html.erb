@@ -1,6 +1,8 @@
-<% @products.each do |product| %>
-    <div><%= product.name %></div>
-    <% if product.images.present? %>
-        <p><%= image_tag product.images.medium.url %></p>
+<section id="productmainpage">
+    <% @products.each do |product| %>
+        <div><%= product.name %></div>
+        <% if product.images.present? %>
+            <p><%= image_tag product.images.medium.url %></p>
+        <% end %>
     <% end %>
-<% end %>
+</section>
