@@ -4,13 +4,12 @@
 </section>
 
 <section id="productmainpage">
-    <section id="mainshow">
-        <% @products.each do |product| %>
-            <div><%= product.name %><br/>
-                <% if product.images.present? %>
-                    <%= image_tag product.images.large.url %>
-                <% end %>
-            </div><br/>
-        <% end %>
-    </section>
+    <% @products.each do |product| %>
+        <div class="mainshow">
+            <h3><%= link_to product.name, product_path(product) %></h3>
+            <% if product.images.present? %>
+                <%= link_to image_tag(product.images.large.url), product_path(product) %>
+            <% end %>
+        </div>
+    <% end %>
 </section>
