@@ -1,9 +1,19 @@
-<div>
+<%= render 'shared/productaside' %>
+
+<div class="oneproduct">
     <h2><%= @product.name %></h2>
     <p>
         <% if @product.images.present? %>
             <%= image_tag @product.images.xlarge.url %>
         <% end %>
-        <br/><strong>Product Details: </strong><%= @product.description %>
+        <br/><br/>
+        <strong>Price: </strong>$<%= @product.price %>
+        <br/>
+        <strong>Product Details: </strong><%= @product.description %>
     </p>
+    <% if @product.stock_qty != 0 %>
+        <p>Add to cart</p>
+    <% else %>
+        <p>sss</p>
+    <% end %>
 </div>

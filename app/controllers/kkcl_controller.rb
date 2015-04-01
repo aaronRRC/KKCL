@@ -1,7 +1,7 @@
 class KkclController < ApplicationController
   def index
     @products = Product.order("RANDOM()").limit(6)
-    @newone = Product.order("RANDOM()").first
+    @newone = Product.order("RANDOM()").where(status: 'new').first
     @find_product = Product.search(params[:search])
   end
   

@@ -89,7 +89,22 @@ footer{
 }
 
 #showproduct{
-    margin-left: 200px;
+    margin-left: 240px;
+
+    .productspage{
+        width:200px;
+        display: inline-block;
+        margin-right: 50px;
+        
+        h2{
+            a{
+                color: black;
+                font-size: 20px;
+            }
+        }
+    }
+    
+    
 }
 
 #productmainpage{
@@ -102,6 +117,7 @@ footer{
         display: inline-block;
         margin-right:50px;
         margin-left: 20px;
+        
         h3{
             a{
                 color: black;
@@ -156,4 +172,19 @@ footer{
     margin-right:auto;
     height:400px;
     font-size: 37px;
+}
+
+.oneproduct{
+    width:$default_width - 230;
+    margin-left:auto;
+    margin-right:auto;
+    
+    h2{
+        font-size: 2.5em;
+    }
+    
+    strong{
+        font-size: 1.2em;
+        color: blue;
+    }
 }

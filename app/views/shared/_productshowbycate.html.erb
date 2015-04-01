@@ -3,18 +3,18 @@
 <% if @products.count == 0 %>
     <p id="empty">Sorry, this section is currently empty.</p>
 <% elsif @products.count > 0 %>
-<section id='showproduct'>
-    <%= paginate @products %>
-    
-    <% @products.each do |product| %>
-        <div><%= product.name %>
-        <% if product.images.present? %>
-            <p><%= image_tag product.images.medium.url %></p>
-        <% end %>
-        </div>
-    <% end %>
-    
-    
-    <%= paginate @products %>
-</section>
+    <section id='showproduct'>
+        <%= paginate @products %>
+        
+        <% @products.each do |product| %>
+            <div class="productspage">
+                <h2><%= link_to product.name, product_path(product) %></h2>
+                <% if product.images.present? %>
+                    <p><%= link_to image_tag(product.images.medium.url), product_path(product) %></p>
+                <% end %>
+            </div>
+        <% end %>       
+        
+        <%= paginate @products %>
+    </section>
 <% end %>
