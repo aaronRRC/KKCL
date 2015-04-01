@@ -9,11 +9,15 @@
         <br/><br/>
         <strong>Price: </strong>$<%= @product.price %>
         <br/>
+        <strong>Stock Quantity: </strong><%= @product.stock_qty %>
+        <br/>
         <strong>Product Details: </strong><%= @product.description %>
     </p>
+    <p>
     <% if @product.stock_qty != 0 %>
-        <p>Add to cart</p>
+        <button id="instock">Add to cart</button>
     <% else %>
-        <p>sss</p>
+        <button id="outtastock" onclick="alert('Sorry, this product currently out of stock')">sss</button>
     <% end %>
+    </p>
 </div>

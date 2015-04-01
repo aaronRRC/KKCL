@@ -86,6 +86,11 @@ footer{
     width:150px;
     position: fixed;
     margin-left: 15px;
+    background: white;
+    
+    h4{
+        margin-left: 5px;
+    }
 }
 
 #showproduct{
@@ -150,7 +155,7 @@ footer{
 }
 
 #ad{
-    border: 1px double blacr;
+    border: 1px double black;
     height: 200px;
     width: $default_width;
     margin-left:auto;
